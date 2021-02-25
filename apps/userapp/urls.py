@@ -5,7 +5,7 @@ from rest_framework.routers import DefaultRouter
 from apps.userapp import views
 
 router = DefaultRouter()
-# router.register('weapon', views)
+router.register('profile', views.ProfileViewAPI)
 
 app_name = 'userapp'
 urlpatterns = [

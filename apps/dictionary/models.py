@@ -1,6 +1,20 @@
 from django.db import models
 
 
+class Position(models.Model):
+    class Meta:
+        verbose_name = 'Должность'
+        verbose_name_plural = 'Должности'
+
+    name = models.CharField(
+        max_length=64,
+        verbose_name='Наименование'
+    )
+
+    def __str__(self):
+        return self.name
+
+
 class Level(models.Model):
     class Meta:
         verbose_name = 'Уровень'

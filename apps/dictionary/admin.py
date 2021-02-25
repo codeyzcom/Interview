@@ -3,6 +3,11 @@ from django.contrib import admin
 from apps.dictionary import models
 
 
+@admin.register(models.Position)
+class PositionAdmin(admin.ModelAdmin):
+    pass
+
+
 @admin.register(models.Level)
 class LevelAdmin(admin.ModelAdmin):
     pass
