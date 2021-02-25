@@ -1,4 +1,5 @@
 from django.db import models
+from simple_history.models import HistoricalRecords
 
 
 class InterviewTask(models.Model):
@@ -31,6 +32,7 @@ class InterviewTask(models.Model):
     answer = models.TextField(
         verbose_name='Верный ответ'
     )
+    history = HistoricalRecords()
 
     def __str__(self):
         return self.name
@@ -73,6 +75,7 @@ class InterviewQuestion(models.Model):
     answer = models.TextField(
         verbose_name='Верный ответ'
     )
+    history = HistoricalRecords()
 
     def __str__(self):
         return self.name
