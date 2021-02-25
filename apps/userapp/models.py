@@ -26,10 +26,10 @@ class Profile(models.Model):
         blank=True,
         verbose_name='Возраст'
     )
-    position = models.CharField(
-        max_length=128,
+    position = models.ForeignKey(
+        'dictionary.Position',
+        on_delete=models.PROTECT,
         null=True,
-        blank=True,
         verbose_name='Должность'
     )
     level = models.ForeignKey(
